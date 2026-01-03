@@ -1,0 +1,36 @@
+{
+  "name": "@nexart/codemode-sdk",
+  "version": "1.5.0",
+  "description": "NexArt Code Mode Runtime SDK - Deterministic generative art rendering engine (Protocol v1.2.0)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "generative-art",
+    "p5js",
+    "canvas",
+    "rendering",
+    "deterministic",
+    "nft",
+    "creative-coding"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artnames/nexart-codemode-sdk.git"
+  },
+  "author": "NexArt",
+  "publishConfig": {
+    "access": "public"
+  }
+}
