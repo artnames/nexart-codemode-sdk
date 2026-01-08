@@ -104,6 +104,12 @@ The v1.4.0 npm package had an outdated runtime that used `Math.random()` directl
 
 ---
 
+### Execution Boundary (Protocol Law)
+
+The Code Mode execution boundary — defining exactly what user code may do, what it may not do, and what the runtime guarantees — is formally specified and locked.
+See: [EXECUTION_BOUNDARY.md](./EXECUTION_BOUNDARY.md)
+This boundary is part of the protocol contract. Any change that weakens or alters it requires a new major protocol version.
+
 ## What This SDK Is
 
 This SDK provides the **canonical runtime** for executing p5.js-style generative art:
