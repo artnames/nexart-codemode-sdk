@@ -1,0 +1,13 @@
+{
+  "protocol": "nexart",
+  "engine": "codemode",
+  "protocolVersion": "1.2.0",
+
+  "source": "function setup() {\n  background(240);\n  randomSeed(424242);\n  noiseSeed(424242);\n\n  translate(width / 2, height / 2);\n  rotate(map(VAR[1], 0, 100, 0, PI));\n\n  noFill();\n  stroke(20);\n  strokeWeight(2);\n\n  beginShape();\n  for (let i = 0; i < 120; i++) {\n    const a = map(i, 0, 119, 0, TWO_PI);\n    const r = 120 + noise(cos(a) + 1, sin(a) + 1) * 60;\n    vertex(cos(a) * r, sin(a) * r);\n  }\n  endShape(CLOSE);\n}",
+
+  "seed": 424242,
+  "vars": [13, 42, 7, 99, 0, 0, 0, 0, 0, 0],
+  "width": 512,
+  "height": 512,
+  "mode": "static"
+}

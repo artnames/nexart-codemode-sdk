@@ -1,0 +1,42 @@
+{
+  "name": "@nexart/codemode-sdk",
+  "version": "1.4.0",
+  "description": "NexArt Code Mode SDK - Canonical execution engine for deterministic generative art",
+  "type": "module",
+  "main": "./dist/core-index.js",
+  "types": "./dist/core-index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/core-index.d.ts",
+      "import": "./dist/core-index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "CODE_MODE_PROTOCOL.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npx tsx smoke-test.ts",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "nexart",
+    "generative-art",
+    "nft",
+    "p5js",
+    "deterministic",
+    "codemode"
+  ],
+  "author": "NexArt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artnames/nexart-codemode-sdk.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

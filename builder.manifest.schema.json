@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://nexart.art/schemas/builder.manifest.json",
+  "title": "NexArt Builder Manifest",
+  "description": "Optional metadata file for builder attribution. NOT validated, NOT required, NOT enforced.",
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "const": "nexart",
+      "description": "Protocol identifier (must be 'nexart')"
+    },
+    "manifest_version": {
+      "type": "string",
+      "description": "Version of this manifest schema",
+      "default": "1.0"
+    },
+    "builder_id": {
+      "type": "string",
+      "description": "Unique identifier for the builder (self-assigned)"
+    },
+    "project_name": {
+      "type": "string",
+      "description": "Name of the project or application"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the project"
+    },
+    "contact": {
+      "type": "string",
+      "description": "Contact email or handle"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "Project website URL"
+    },
+    "intended_use": {
+      "type": "string",
+      "enum": ["art", "game", "research", "commercial", "education", "other"],
+      "description": "Primary intended use case"
+    },
+    "sdk_version": {
+      "type": "string",
+      "description": "Version of @nexart/codemode-sdk being used"
+    },
+    "features": {
+      "type": "object",
+      "description": "Optional feature flags",
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Arbitrary additional metadata",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}
