@@ -1,0 +1,42 @@
+{
+  "name": "@nexart/cli",
+  "version": "0.2.1",
+  "description": "NexArt CodeMode CLI - Run, replay, and verify deterministic generative art",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "nexart": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": [
+    "nexart",
+    "codemode",
+    "generative-art",
+    "deterministic",
+    "cli",
+    "nft",
+    "verification"
+  ],
+  "author": "NexArt",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/yargs": "^17.0.32",
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

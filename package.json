@@ -1,0 +1,89 @@
+{
+  "name": "@nexart/codemode-sdk",
+  "version": "1.8.4",
+  "description": "NexArt Code Mode SDK - Deterministic, reproducible, verifiable generative art runtime. Agent-first design for AI coding assistants.",
+  "type": "module",
+  "main": "./dist/cjs/browser.cjs",
+  "module": "./dist/esm/browser.js",
+  "types": "./dist/types/entry/browser.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/entry/browser.d.ts",
+      "import": "./dist/esm/browser.js",
+      "require": "./dist/cjs/browser.cjs"
+    },
+    "./browser": {
+      "types": "./dist/types/entry/browser.d.ts",
+      "import": "./dist/esm/browser.js",
+      "require": "./dist/cjs/browser.cjs"
+    },
+    "./node": {
+      "types": "./dist/types/entry/node.d.ts",
+      "import": "./dist/esm/node.js",
+      "require": "./dist/cjs/node.cjs"
+    },
+    "./core": {
+      "types": "./dist/types/core-index.d.ts",
+      "import": "./dist/esm/core.js",
+      "require": "./dist/cjs/core.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "CHANGELOG.md",
+    "CODE_MODE_PROTOCOL.md",
+    "LICENSE.md",
+    "COMMERCIAL.md",
+    "builder.manifest.schema.json"
+  ],
+  "scripts": {
+    "build": "npm run build:types && npm run build:esm && npm run build:cjs",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:esm": "tsup --config tsup.config.ts --format esm",
+    "build:cjs": "tsup --config tsup.config.ts --format cjs",
+    "test": "npx tsx smoke-test.ts",
+    "test:node": "node scripts/smoke-node.mjs && node scripts/smoke-node.cjs",
+    "example:basic": "npx tsx examples/basic.ts",
+    "example:verify": "npx tsx examples/verify.ts",
+    "example:agent": "npx tsx examples/agent-quickstart.ts",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "nexart",
+    "generative-art",
+    "nft",
+    "p5js",
+    "deterministic",
+    "reproducible",
+    "verifiable",
+    "replay",
+    "canonical",
+    "simulation",
+    "procedural",
+    "generative",
+    "seed",
+    "prng",
+    "noise",
+    "codemode",
+    "browser",
+    "node",
+    "ai-agent",
+    "strict-mode"
+  ],
+  "author": "NexArt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artnames/nexart-codemode-sdk.git"
+  },
+  "homepage": "https://github.com/artnames/nexart-codemode-sdk#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}

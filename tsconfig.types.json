@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist/types",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "lib": ["ES2020", "DOM"]
+  },
+  "files": [
+    "core-index.ts",
+    "types.ts",
+    "execute.ts",
+    "p5-runtime.ts",
+    "static-engine.ts",
+    "loop-engine.ts",
+    "engine.ts",
+    "execution-sandbox.ts",
+    "builder-manifest.ts",
+    "runtime.ts",
+    "version.ts",
+    "snapshot.ts",
+    "soundart-engine.ts",
+    "entry/browser.ts",
+    "entry/node.ts"
+  ]
+}
